@@ -2,86 +2,73 @@
 
 ## Tasks :page_with_curl:
 
-* **0. Where am I?**
-  * [0-current_working_directory](./0-current_working_directory): Bash script that
-  prints the absolute pathname of the current working directory.
+* **0. My name is Betty**
+  * [0-iam_betty](./0-iam_betty): Bash script that switches the current user to the user betty.
 
-* **1. What’s in there?**
-  * [1-listit](./1-listit): Bash script that displays the contents list of current directory.
+* **1. Who am I**
+  * [1-whoami](./1-whoami): Bash script that prints the effective username of the current user.
 
-* **2. There is no place like home**
-  * [2-bring_me_home](./2-bring_me_home): Bash script that changes the working directory to the
-  user's home directory.
+* **2. Groups**
+  * [2-groups](./2-groups): Bash script that prints all the groups the current user is part of.
 
-* **3. The long format**
-  * [3-listfiles](./3-listfiles): Bash script that displays current directory contents in
-  long format.
+* **3. New Owner**
+  * [3-new_owner)](./3-new_owner): Bash script that changes the owner of the file `hello` to the user `betty`.
 
-* **4. Hidden files**
-  * [4-listmorefiles](./4-listmorefiles): Bash script that displays current directory contents,
-  including hidden files, using long format.
+* **4. Empty!**
+  * [4-empty](./4-empty): Bash script that creates an empty file called hello.
 
-* **5. I love numbers**
-  * [5-listfilesdigitonly](./5-listfilesdigitonly): Bash script that displays current directory
-  contents, including hidden files, as follows:
-    * Long format.
-    * User and group ID's displayed numerically.
+* **5. Execute**
+  * [5-execute](./5-execute): Bash script that adds execute permission to the owner of the file `hello`.
+  * The file `hello` will be in the working directory
 
-* **6. Welcome**
-  * [6-firstdirectory](./6-firstdirectory): Bash script that creates a directory named `holberton`
-  in the `/tmp/` directory.
+* **6. Multiple Permissions**
+  * [6-multiple_permissions](./6-multiple_permissions): that adds execute permission to the owner and the group owner, and read permission to other users, to the file `hello`.
+  * The file `hello` will be in the working directory
 
-* **7. Betty in my first directory**
-  * [7-movethatfile](./7-movethatfile): Bash script that moves the file `betty` from `/tmp/` to
-  `/tmp/holberton`.
+* **7. Everybody!**
+  * [7-movethatfile](./7-movethatfile): that adds execution permission to the owner, the group owner and the other users, to the file `hello`
+  * The file `hello` will be in the working director
 
-* **8. Bye bye Betty**
-  * [8-firstdelete](./8-firstdelete): Bash script that deletes the file `betty` in `/tmp/holberton`.
+* **8. James Bond**
+  * [8-James_Bond](./8-James_Bond): Bash script that sets the permission to the file `hello` as follows:
+    * Owner: no permission at all
+    * Group: no permission at all
+    * Other users: all the permissions
+  * The file `hello` will be in the working directory 
 
-* **9. Bye bye My first directory**
-  * [9-firstdirdeletion](./9-firstdirdeletion): Bash script that deletes the directory `holberton`
-  in the `/tmp` directory.
+* **9. John Doe**
+  * [9-John_Doe](./9-John_Doe): Bash script that sets the mode of the file `hello` to this:
+  ```
+  -rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello
+  ```
+  * The file `hello` will be in the working directory
 
-* **10. Back to the future**
-  * [10-back](./10-back): Bash script that changes the working directory to the previous one.
+* **10. Look in the mirror**
+  * [10-mirror_permissions](./10-mirror_permissions): Bash script that sets the mode of the file `hello` the same as `olleh`’s mode.
+  * The file `hello` will be in the working directory
+  * The file `olleh` will be in the working directory
 
-* **11. Lists**
-  * [11-lists](./11-lists): Bash script that lists all files, including hidden files, in the
-  current directory, parent of the working directory, and `/boot` directory, using long format.
+* **11. Directories**
+  * [11-directories_permissions](./11-directories_permissions): Bash script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users. Regular files should not be changed.
 
-* **12. File type**
-  * [12-file_type](./12-file_type): Bash script that prints the type of the file named
-  `iamafile` located in the `/tmp` directory.
+* **12. More directories**
+  * [12-directory_permissions](./12-directory_permissions): Bash script Create a script that creates a directory called `my_dir` with permissions 751 in the working directory.
 
-* **13. We are symbols, and inhabit symbols**
-  * [13-symbolic_link](./13-symbolic_link): Bash script that creates a symbolic link to `/bin/ls`,
-  named `__ls__`.
+* **13. Change group**
+  * [13-change_group](./13-change_group): Bash script that changes the group owner to `school` for the file `hello`.
+  * The file `hello` will be in the working directory
 
-* **14. Copy HTML files**
-  * [14-copy_html](./14-copy_html): Bash script that copies all HTML files from the current
-  working directory to the parent of the working directory, but only those that
-  did not exist in the parent directory or were newer than the versions in the parent working directory.
+* **14. Owner and group**
+  * [100-change_owner_and_group](./100-change_owner_and_group): Bash script Write a script that changes the owner to `vincent` and the group owner to `staff` for all the files and directories in the working directory.
 
-* **15. Let’s move**
-  * [100-lets_move](./100-lets_move): Bash script that moves all files beginning with an uppercase
-  letter to the directory `/tmp/u`.
+* **15. Symbolic links**
+  * [101-symbolic_link_permissions](./101-symbolic_link_permissions): Bash script that changes the owner and the group owner of `_hello` to `vincent` and `staff` respectively.
+  * The file `_hello` is in the working directory
+  * The file `_hello` is a symbolic link
 
-* **16. Clean Emacs**
-  * [101-clean_emacs](./101-clean_emacs): Bash script that deletes all files in the current working
-  directory that end with the character `~`.
+* **16. If only**
+  * [102-if_only](./102-if_only): that changes the owner of the file `hello` to `betty` only if it is owned by the user `guillaume`.
+  * The file `hello` will be in the working directory 
 
-* **17. Tree**
-  * [102-tree](./102-tree): Bash script that creates the directories `welcome/`,
-  `welcome/to/` and `welcome/to/school` in the current directory.
-
-* **18. Life is a series of commas, not periods**
-  * [103-commas](./103-commas): Bash script that lists all files and directories of the current
-  directory, including hidden ones, as follows:
-    * Separated by commas (`,`).
-    * Directory names end with a slash (`/`).
-    * Alpha-ordered, except for the directories `.` and `..` which are listed at the beginning.
-    * Only digits and letters are used to sort - digits come first.
-
-* **19. File type: School**
-  * [School.mgc](./school.mgc): A magic file that can be used with the command `file` to
-  detect `School` data files.
+* **17. Star Wars**
+  * [103-Star_Wars](./103-Star_Wars): Bash script that will play the StarWars IV episode in the terminal.
